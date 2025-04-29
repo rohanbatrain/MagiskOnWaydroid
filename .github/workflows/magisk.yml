@@ -683,7 +683,7 @@ jobs:
           fi
           echo "artifact_name=WD${name1}${name2}_${{ matrix.arch }}" >> $GITHUB_ENV
       - name: Upload Waydroid
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ env.artifact_name }}
           path: "./${{ matrix.arch }}/*"
